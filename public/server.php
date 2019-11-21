@@ -16,7 +16,7 @@ $serv->on('Connect', function ($serv, $fd,$reactor_id) {
 
 //监听数据接收事件
 $serv->on('Receive', function ($serv, $fd, $reactor_id, $data) {
-	$serv->send($fd,$reactor_id . "  Server: ".$data);
+	$serv->send($fd, "Server返回数据: ".$reactor_id.'111111'.$data);
 });
 
 //监听连接关闭事件
