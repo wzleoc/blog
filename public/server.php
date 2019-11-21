@@ -16,12 +16,12 @@ $serv->on('Connect', function ($serv, $fd,$reactor_id) {
 
 //监听数据接收事件
 $serv->on('Receive', function ($serv, $fd, $reactor_id, $data) {
-	$serv->send($fd, "Server: ".$data);
+	$serv->send($fd,$reactor_id . "  Server: ".$data);
 });
 
 //监听连接关闭事件
 $serv->on('Close', function ($serv, $fd) {
-	echo "Client: Close.\n";
+	echo "Client: $fd Close.\n";
 });
 
 //启动服务器
