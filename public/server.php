@@ -1,7 +1,7 @@
 <?php
 //创建Server对象，监听 127.0.0.1:9501端口
 $serv = new Swoole\Server("127.0.0.1", 9501);
-echo $serv->worker_num;die;
+
 $serv->set(
 	[
 		'worker_num'=>8,//worker进程数
