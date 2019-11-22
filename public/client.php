@@ -1,6 +1,6 @@
 <?php
 //链接swoole tcp服务
-$client = new swoole_clinet(SWOOLE_SOCK_TCP);
+$client = new Swoole\Client(SWOOLE_SOCK_TCP);
 
 if(!$client->connect('127.0.0.1',9501,0.5)){
 
