@@ -20,8 +20,7 @@ $serv->on('Receive', function ($serv, $fd, $reactor_id, $data) {
 });
 
 //监听连接关闭事件
-$serv->on('C  
-lose', function ($serv, $fd) {
+$serv->on('Close', function ($serv, $fd) {
 	echo "Client: $fd Close.\n";
 });
 
