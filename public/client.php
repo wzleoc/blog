@@ -8,7 +8,7 @@ if(!$client->connect('127.0.0.1',9501,0.5)){//ip port
 }
 fwrite(STDOUT,'请输入消息:');
 
-$msg = trim(fget(STDIN));
+$msg = trim(fgets(STDIN));
 //像服务器发送数据
 //$data = 'i am client1 request string';
 
