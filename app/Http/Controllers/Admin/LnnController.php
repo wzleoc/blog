@@ -7,7 +7,13 @@ use App\Http\Controllers\Controller;
 class LnnController extends Controller
 {
     public function index(){
-	    $serv = new Swoole\Server("127.0.0.1", 9501);
-	    var_dump($serv);die;
+	    $http =new Swoole\Http\Server('0.0.0.0',8811);
+	    $http->on('request',function($request,$response){
+
+//	$aa = $request->get;
+//	print_r($aa);
+		    $response->end('rrrrrrr');
+	    });
+	    $http->start();
     }
 }
