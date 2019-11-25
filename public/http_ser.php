@@ -6,3 +6,4 @@ $http->on('request',function($request,$response){
 //	print_r($aa);
 	$response->end('rrrrrrr'.json_encode($aa));
 });
+$http->start();
