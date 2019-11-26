@@ -1,9 +1,9 @@
 <?php
 $ws = new Swoole\WebSocket\Server('0.0.0.0',9503);
-$ws->set([
-	'enable_static_handler'=>true,
-	'document_root'=>'./'
-]);
+//$ws->set([
+//	'enable_static_handler'=>true,
+//	'document_root'=>'./'
+//]);
 $ws->on('open',function(Swoole\WebSocket\Server $ws,$request){
 
 	echo "server:handshake success with fd{$request->fd}\n";
