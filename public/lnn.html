@@ -8,6 +8,30 @@
     <title>Document</title>
 </head>
 <body>
-我是http server 静态页面
+<h1>ws测试</h1>
+<script>
+    var wsUrl = 'ws://140.143.250.29:9503';
+    var websocket = new WebSocket(wsUrl);
+
+    //实例对象的onopen属性
+    websocket.onopen = function(evt){
+
+        console.log('connnect awoole-success');
+    }
+
+    //实例  接收客户端消息
+    websocket.onmessage = function(evt){
+        console.log('ws-server-return data:'+evt.data);
+    }
+
+    //onclose
+    websocket.onclose = function(evt){
+        console.log('close');
+    }
+    //onerror
+    websocket.onerror = function(evt){
+        console.log('error:'+evt.error);
+    }
+</script>
 </body>
 </html>
