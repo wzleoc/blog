@@ -18,4 +18,10 @@ Route::get('/', function () {
 Route::namespace('Admin')->group(function(){
 
 	Route::get('lnn/index','LnnController@index');
+//	Route::get('user/index/{name?}','UserController@index')->where(['name'=>'[0-9]+']);//可以有这个name参数可以没有
+	Route::get('user/index/{name?}','UserController@index');//可以有这个name参数可以没有
+	Route::get('api/user/{admin}',function(App\User $user){
+
+		return $user->name;
+	});//可以有这个name参数可以没有
 });
